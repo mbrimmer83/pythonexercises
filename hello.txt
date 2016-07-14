@@ -1,3 +1,5 @@
-This is the Hello.txt test file.
-Hello, World!
-My name is Matthew!
+Hello!
+My name is Matthew, and I am learning python!
+What about javascript?
+I like javascript, but now I have to learn python.
+Goodbye!
