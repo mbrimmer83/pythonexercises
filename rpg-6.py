@@ -38,6 +38,7 @@ class Hero(Character):
         self.coins = 20
         self.armor = 0
         self.evade = 0
+        self.kill = False
 
     def restore(self):
         self.health = 10
@@ -117,7 +118,10 @@ class Zombie(Character):
         self.coins = 10
 
     def alive(self):
-        return True
+        if hero.kill == True:
+            return False
+        else:
+            return True
 
 class Dragon(Character):
     def __init__(self):
@@ -238,11 +242,23 @@ class Evade(object):
         hero.evade += 2
         print "Evade has been added to %s" % hero.name
 
+class Kill(object):
+    cost = 35
+    name = 'kill'
+    def apply(self, hero):
+        hero.kill = True
+
+class Double(object):
+    cost = 50
+    name = 'double'
+    def apply(self, hero):
+        hero.power = hero.power * 2
+
 class Shopping(object):
     # If you define a variable in the scope of a class:
     # This is a class variable and you can access it like
     # Shopping.items => [Tonic, Sword]
-    items = [SuperTonic, Tonic, Sword, Armor, Evade]
+    items = [SuperTonic, Tonic, Sword, Armor, Evade, Kill, Double]
     def do_shopping(self, hero):
         while True:
             print "====================="
