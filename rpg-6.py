@@ -239,8 +239,11 @@ class Evade(object):
     cost = 20
     name = 'evade'
     def apply(self, hero):
-        hero.evade += 2
-        print "Evade has been added to %s" % hero.name
+        if hero.evade < 40:
+            hero.evade += 2
+            print "Evade has been added to %s" % hero.name
+        else:
+            print "Max evade has been reach"
 
 class Kill(object):
     cost = 35
