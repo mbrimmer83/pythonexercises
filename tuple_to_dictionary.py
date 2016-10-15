@@ -1,14 +1,14 @@
 # mysql returns tuple which is like a list of lists
 data = [
-    ['title1', 'content', 'image_url'],
-    ['title1', 'content', 'image_url'],
-    ['title1', 'content', 'image_url'],
-    ['title2', 'content', 'image_url'],
-    ['title2', 'content', 'image_url'],
-    ['title2', 'content', 'image_url'],
-    ['title3', 'content', 'image_url'],
-    ['title3', 'content', 'image_url'],
-    ['title3', 'content', 'image_url']
+    ['title1', 'content1', 'image_url1'],
+    ['title1', 'content2', 'image_url2'],
+    ['title1', 'content3', 'image_url3'],
+    ['title2', 'content4', 'image_url4'],
+    ['title2', 'content5', 'image_url5'],
+    ['title2', 'content6', 'image_url6'],
+    ['title3', 'content7', 'image_url7'],
+    ['title3', 'content8', 'image_url8'],
+    ['title3', 'content9', 'image_url9']
 ]
 # The new data will be a list of dictionaries
 def create_dictionary(data):
